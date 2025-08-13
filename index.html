@@ -3,71 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Каталог запчастей EVOLUTION 12/16</title>
+    <title>Каталог запчастей EVOLUTION 12/16 – IRIS</title>
     <link rel="stylesheet" href="static/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <meta name="description" content="Полный каталог запчастей EVOLUTION 12/16 от IRIS Inspection machines">
+    <meta name="keywords" content="IRIS, EVOLUTION 12/16, запчасти, каталог">
 </head>
 <body>
+    <!-- IRIS-стиль header -->
     <header class="iris-header">
         <div class="container">
-            <h1>IRIS Catalog</h1>
-            <p>EVOLUTION 12/16 Spare Parts</p>
+            <div class="logo">
+                <h1>IRIS <span>Catalog</span></h1>
+                <p>EVOLUTION 12/16 Spare Parts</p>
+            </div>
+            <div class="header-tools">
+                <!-- Поиск -->
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="Поиск по REF или описанию…">
+                    <button id="searchBtn"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
         </div>
     </header>
 
+    <!-- Навигация по категориям -->
+    <nav class="iris-nav">
+        <div class="container">
+            <ul class="nav-list">
+                <li><a href="#electronics" class="nav-link active">Электроника</a></li>
+                <li><a href="#pc-iris" class="nav-link">PC IRIS</a></li>
+                <li><a href="#cables" class="nav-link">Кабели</a></li>
+                <li><a href="#optics" class="nav-link">Оптика</a></li>
+                <li><a href="#encoder" class="nav-link">Кодер</a></li>
+                <li><a href="#spacer" class="nav-link">Разделители</a></li>
+                <li><a href="#pneumatic" class="nav-link">Пневматика</a></li>
+                <li><a href="#others" class="nav-link">Прочее</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Основной контент -->
     <main class="container">
+
         <!-- Electronics -->
         <section id="electronics" class="section">
             <h2>Электроника / Электрика</h2>
             <div class="parts-grid">
-                <div class="part-card">
-                    <img src="static/images/extracted/ED018.jpg" alt="Fusible 500mA 250V">
-                    <div class="part-info">
-                        <h3>ED018</h3>
-                        <p>Fusible 500mA 250V</p>
-                    </div>
-                </div>
-                <div class="part-card">
-                    <img src="static/images/extracted/ED019.jpg" alt="Fusible 10A 250V">
-                    <div class="part-info">
-                        <h3>ED019</h3>
-                        <p>Fusible 10A 250V</p>
-                    </div>
-                </div>
-                <div class="part-card">
-                    <img src="static/images/extracted/K190753-2.jpg" alt="Carte tracking">
-                    <div class="part-info">
-                        <h3>K190753-2</h3>
-                        <p>Carte tracking</p>
-                    </div>
-                </div>
-                <div class="part-card">
-                    <img src="static/images/extracted/K260301-0.jpg" alt="Carte Spider 2NG">
-                    <div class="part-info">
-                        <h3>K260301-0</h3>
-                        <p>Carte Spider 2NG (2022)</p>
-                    </div>
-                </div>
-                <div class="part-card">
-                    <img src="static/images/extracted/ED804.jpg" alt="Power Supply">
-                    <div class="part-info">
-                        <h3>ED804</h3>
-                        <p>Alimentation E230V S+24V 12.5A 300W</p>
-                    </div>
-                </div>
-                <div class="part-card">
-                    <img src="static/images/extracted/K108019.jpg" alt="PC104 Board">
-                    <div class="part-info">
-                        <h3>K108019</h3>
-                        <p>PC104 Board</p>
-                    </div>
-                </div>
-                <div class="part-card">
-                    <img src="static/images/extracted/K190777-1.jpg" alt="Encoder board">
-                    <div class="part-info">
-                        <h3>K190777-1</h3>
-                        <p>Encoder board</p>
-                    </div>
-                </div>
+                <!-- 15 элементов -->
+                <div class="part-card"><img src="static/images/extracted/ED018.jpg" alt="ED018"><h3>ED018</h3><p>Fusible 500mA 250V</p></div>
+                <div class="part-card"><img src="static/images/extracted/ED019.jpg" alt="ED019"><h3>ED019</h3><p>Fusible 10A 250V</p></div>
+                <div class="part-card"><img src="static/images/extracted/ED020.jpg" alt="ED020"><h3>ED020</h3><p>FUSE 1A 250V</p></div>
+                <div class="part-card"><img src="static/images/extracted/ED021.jpg" alt="ED021"><h3>ED021</h3><p>Relai 24V</p></div>
+                <div class="part-card"><img src="static/images/extracted/K190753-2.jpg" alt="K190753-2"><h3>K190753-2</h3><p>Tracking Board</p></div>
+                <div class="part-card"><img src="static/images/extracted/K200609-1A.jpg" alt="K200609-1A"><h3>K200609-1A</h3><p>Tracking Board (2020)</p></div>
+                <div class="part-card"><img src="static/images/extracted/K108019.jpg" alt="K108019"><h3>K108019</h3><p>PC104 Board</p></div>
+                <div class="part-card"><img src="static/images/extracted/K190777-1.jpg" alt="K190777-1"><h3>K190777-1</h3><p>Encoder board</p></div>
+                <div class="part-card"><img src="static/images/extracted/K190801-1.jpg" alt="K190801-1"><h3>K190801-1</h3><p>Intcam Board Analogic type 1</p></div>
+                <div class="part-card"><img src="static/images/extracted/K190801-2.jpg" alt="K190801-2"><h3>K190801-2</h3><p>Intcam Board Analogic type 2</p></div>
+                <div class="part-card"><img src="static/images/extracted/K190801-3.jpg" alt="K190801-3"><h3>K190801-3</h3><p>Intcam Board Analogic type 3</p></div>
+                <div class="part-card"><img src="static/images/extracted/K191188.jpg" alt="K191188"><h3>K191188</h3><p>Numeric Intcam Board</p></div>
+                <div class="part-card"><img src="static/images/extracted/K190874.jpg" alt="K190874"><h3>K190874</h3><p>Spider 1 Board V1</p></div>
+                <div class="part-card"><img src="static/images/extracted/K260301-0.jpg" alt="K260301-0"><h3>K260301-0</h3><p>Spider 2Board NG (2022)</p></div>
+                <div class="part-card"><img src="static/images/extracted/ED804.jpg" alt="ED804"><h3>ED804</h3><p>Power supply E230V S+24V 12.5A 300W</p></div>
             </div>
         </section>
 
@@ -75,27 +73,12 @@
         <section id="pc-iris" class="section">
             <h2>PC IRIS</h2>
             <div class="parts-grid">
-                <div class="part-card">
-                    <img src="static/images/extracted/HV316.jpg" alt="PC Iris HD EVO 16">
-                    <div class="part-info">
-                        <h3>HV316</h3>
-                        <p>PC Iris HD EVO 16</p>
-                    </div>
-                </div>
-                <div class="part-card">
-                    <img src="static/images/extracted/HV305.jpg" alt="PC Iris HD EVO 5">
-                    <div class="part-info">
-                        <h3>HV305</h3>
-                        <p>PC Iris HD EVO 5</p>
-                    </div>
-                </div>
-                <div class="part-card">
-                    <img src="static/images/extracted/HV312.jpg" alt="PC Iris HD EVO 12">
-                    <div class="part-info">
-                        <h3>HV312</h3>
-                        <p>PC Iris HD EVO 12</p>
-                    </div>
-                </div>
+                <div class="part-card"><img src="static/images/extracted/HV316.jpg" alt="HV316"><h3>HV316</h3><p>PC Iris HD EVO 16</p></div>
+                <div class="part-card"><img src="static/images/extracted/HV305.jpg" alt="HV305"><h3>HV305</h3><p>PC Iris HD EVO 5</p></div>
+                <div class="part-card"><img src="static/images/extracted/HV312.jpg" alt="HV312"><h3>HV312</h3><p>PC Iris HD EVO 12</p></div>
+                <div class="part-card"><img src="static/images/extracted/HV312NEO.jpg" alt="HV312NEO"><h3>HV312NEO</h3><p>PC Iris HD EVO 12NEO</p></div>
+                <div class="part-card"><img src="static/images/extracted/HV316NEO.jpg" alt="HV316NEO"><h3>HV316NEO</h3><p>PC Iris HD EVO 16NEO</p></div>
+                <div class="part-card"><img src="static/images/extracted/HV006T.jpg" alt="HV006T"><h3>HV006T</h3><p>Vision board</p></div>
             </div>
         </section>
 
@@ -103,27 +86,11 @@
         <section id="cables" class="section">
             <h2>Кабели</h2>
             <div class="parts-grid">
-                <div class="part-card">
-                    <img src="static/images/extracted/K182193.jpg" alt="Encoder cable Evo12 10m">
-                    <div class="part-info">
-                        <h3>K182193</h3>
-                        <p>Encoder cable Evo12 10m</p>
-                    </div>
-                </div>
-                <div class="part-card">
-                    <img src="static/images/extracted/HCBL162.jpg" alt="Cell cable 5m">
-                    <div class="part-info">
-                        <h3>HCBL162</h3>
-                        <p>Cell cable 5m</p>
-                    </div>
-                </div>
-                <div class="part-card">
-                    <img src="static/images/extracted/K181383-300C.jpg" alt="Camera cable Teli CS8560 3m">
-                    <div class="part-info">
-                        <h3>K181383-300C</h3>
-                        <p>Camera cable Teli CS8560 3m</p>
-                    </div>
-                </div>
+                <div class="part-card"><img src="static/images/extracted/K182193.jpg" alt="K182193"><h3>K182193</h3><p>Encoder cable Evo12 10m</p></div>
+                <div class="part-card"><img src="static/images/extracted/HCBL162.jpg" alt="HCBL162"><h3>HCBL162</h3><p>Cell cable 5m</p></div>
+                <div class="part-card"><img src="static/images/extracted/K181383-300C.jpg" alt="K181383-300C"><h3>K181383-300C</h3><p>Camera cable Teli CS8560 3m</p></div>
+                <div class="part-card"><img src="static/images/extracted/K181383-500C.jpg" alt="K181383-500C"><h3>K181383-500C</h3><p>Camera cable Teli CS8560 5m</p></div>
+                <div class="part-card"><img src="static/images/extracted/K181383-700.jpg" alt="K181383-700"><h3>K181383-700</h3><p>Camera cable Teli CS8560 7m</p></div>
             </div>
         </section>
 
@@ -131,27 +98,13 @@
         <section id="optics" class="section">
             <h2>Оптика и освещение</h2>
             <div class="parts-grid">
-                <div class="part-card">
-                    <img src="static/images/extracted/HV340.jpg" alt="HD Camera EV16 type 3">
-                    <div class="part-info">
-                        <h3>HV340</h3>
-                        <p>HD Camera EV16 type 3</p>
-                    </div>
-                </div>
-                <div class="part-card">
-                    <img src="static/images/extracted/HV150.jpg" alt="6 mm focal lens">
-                    <div class="part-info">
-                        <h3>HV150</h3>
-                        <p>6 mm focal lens</p>
-                    </div>
-                </div>
-                <div class="part-card">
-                    <img src="static/images/extracted/HV155.jpg" alt="8 mm focal lens">
-                    <div class="part-info">
-                        <h3>HV155</h3>
-                        <p>8 mm focal lens</p>
-                    </div>
-                </div>
+                <div class="part-card"><img src="static/images/extracted/HV340.jpg" alt="HV340"><h3>HV340</h3><p>HD Camera EV16 type 3</p></div>
+                <div class="part-card"><img src="static/images/extracted/HV150.jpg" alt="HV150"><h3>HV150</h3><p>6 mm focal lens</p></div>
+                <div class="part-card"><img src="static/images/extracted/HV155.jpg" alt="HV155"><h3>HV155</h3><p>8 mm focal lens</p></div>
+                <div class="part-card"><img src="static/images/extracted/HV160.jpg" alt="HV160"><h3>HV160</h3><p>12 mm focal lens</p></div>
+                <div class="part-card"><img src="static/images/extracted/HV163.jpg" alt="HV163"><h3>HV163</h3><p>16 mm focal lens</p></div>
+                <div class="part-card"><img src="static/images/extracted/HV166.jpg" alt="HV166"><h3>HV166</h3><p>25 mm focal lens</p></div>
+                <div class="part-card"><img src="static/images/extracted/MK500497.jpg" alt="MK500497"><h3>MK500497</h3><p>Full set neon light source</p></div>
             </div>
         </section>
 
@@ -159,27 +112,10 @@
         <section id="encoder" class="section">
             <h2>Кодер</h2>
             <div class="parts-grid">
-                <div class="part-card">
-                    <img src="static/images/extracted/MK500395.jpg" alt="SET Encoder + support + cable">
-                    <div class="part-info">
-                        <h3>MK500395</h3>
-                        <p>SET Encoder + support + cable</p>
-                    </div>
-                </div>
-                <div class="part-card">
-                    <img src="static/images/extracted/ED303.jpg" alt="Encoder 24V">
-                    <div class="part-info">
-                        <h3>ED303</h3>
-                        <p>Encoder 24V</p>
-                    </div>
-                </div>
-                <div class="part-card">
-                    <img src="static/images/extracted/ED024.jpg" alt="63mm encoder wheel">
-                    <div class="part-info">
-                        <h3>ED024</h3>
-                        <p>63mm encoder wheel</p>
-                    </div>
-                </div>
+                <div class="part-card"><img src="static/images/extracted/MK500395.jpg" alt="MK500395"><h3>MK500395</h3><p>SET Encoder + support + cable</p></div>
+                <div class="part-card"><img src="static/images/extracted/ED303.jpg" alt="ED303"><h3>ED303</h3><p>Encoder 24V</p></div>
+                <div class="part-card"><img src="static/images/extracted/ED024.jpg" alt="ED024"><h3>ED024</h3><p>63mm encoder wheel</p></div>
+                <div class="part-card"><img src="static/images/extracted/MR018.jpg" alt="MR018"><h3>MR018</h3><p>Encoder coupling</p></div>
             </div>
         </section>
 
@@ -187,27 +123,10 @@
         <section id="spacer" class="section">
             <h2>Разделители</h2>
             <div class="parts-grid">
-                <div class="part-card">
-                    <img src="static/images/extracted/ESP021.jpg" alt="Standard Spacer version 2">
-                    <div class="part-info">
-                        <h3>ESP021</h3>
-                        <p>Standard Spacer version 2</p>
-                    </div>
-                </div>
-                <div class="part-card">
-                    <img src="static/images/extracted/ESP022.jpg" alt="Easy set Spacer version 1">
-                    <div class="part-info">
-                        <h3>ESP022</h3>
-                        <p>Easy set Spacer version 1</p>
-                    </div>
-                </div>
-                <div class="part-card">
-                    <img src="static/images/extracted/ESP012.jpg" alt="Long spacer standard">
-                    <div class="part-info">
-                        <h3>ESP012</h3>
-                        <p>Long spacer standard</p>
-                    </div>
-                </div>
+                <div class="part-card"><img src="static/images/extracted/ESP021.jpg" alt="ESP021"><h3>ESP021</h3><p>Standard Spacer version 2</p></div>
+                <div class="part-card"><img src="static/images/extracted/ESP022.jpg" alt="ESP022"><h3>ESP022</h3><p>Easy set Spacer version 1</p></div>
+                <div class="part-card"><img src="static/images/extracted/ESP012.jpg" alt="ESP012"><h3>ESP012</h3><p>Long spacer standard</p></div>
+                <div class="part-card"><img src="static/images/extracted/ESP013.jpg" alt="ESP013"><h3>ESP013</h3><p>Multi-article spacer</p></div>
             </div>
         </section>
 
@@ -215,20 +134,9 @@
         <section id="pneumatic" class="section">
             <h2>Пневматика</h2>
             <div class="parts-grid">
-                <div class="part-card">
-                    <img src="static/images/extracted/MK200616.jpg" alt="Ejecteur complet et support">
-                    <div class="part-info">
-                        <h3>MK200616</h3>
-                        <p>Ejecteur complet et support</p>
-                    </div>
-                </div>
-                <div class="part-card">
-                    <img src="static/images/extracted/PM011.jpg" alt="Reject valve 3/2">
-                    <div class="part-info">
-                        <h3>PM011</h3>
-                        <p>Electrovane Rejet 3/2</p>
-                    </div>
-                </div>
+                <div class="part-card"><img src="static/images/extracted/MK200616.jpg" alt="MK200616"><h3>MK200616</h3><p>Ejecteur complet et support</p></div>
+                <div class="part-card"><img src="static/images/extracted/PM011.jpg" alt="PM011"><h3>PM011</h3><p>Electrovane Rejet 3/2</p></div>
+                <div class="part-card"><img src="static/images/extracted/PM009.jpg" alt="PM009"><h3>PM009</h3><p>Manometer 0-10B 1/8</p></div>
             </div>
         </section>
 
@@ -236,22 +144,41 @@
         <section id="others" class="section">
             <h2>Прочее</h2>
             <div class="parts-grid">
-                <div class="part-card">
-                    <img src="static/images/extracted/CA009.jpg" alt="Cellule IPRK 18 (Sick)">
-                    <div class="part-info">
-                        <h3>CA009</h3>
-                        <p>Cellule IPRK 18 (Sick)</p>
-                    </div>
-                </div>
-                <div class="part-card">
-                    <img src="static/images/extracted/HV140.jpg" alt="Calibration tool">
-                    <div class="part-info">
-                        <h3>HV140</h3>
-                        <p>Outil de calibration</p>
-                    </div>
-                </div>
+                <div class="part-card"><img src="static/images/extracted/CA009.jpg" alt="CA009"><h3>CA009</h3><p>Cellule IPRK 18 (Sick)</p></div>
+                <div class="part-card"><img src="static/images/extracted/HV140.jpg" alt="HV140"><h3>HV140</h3><p>Outil de calibration</p></div>
+                <div class="part-card"><img src="static/images/extracted/CA002.jpg" alt="CA002"><h3>CA002</h3><p>TKS 30x50 Reflector</p></div>
             </div>
         </section>
     </main>
+
+    <footer class="iris-footer">
+        <div class="container">
+            <p>&copy; 2025 IRIS Inspection machines. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <!-- Поиск и плавная прокрутка -->
+    <script>
+        // Поиск по REF или описанию
+        const searchInput = document.getElementById('searchInput');
+        const searchBtn   = document.getElementById('searchBtn');
+        searchInput.addEventListener('input', () => {
+            const val = searchInput.value.toLowerCase();
+            document.querySelectorAll('.part-card').forEach(card => {
+                const ref  = card.querySelector('h3').textContent.toLowerCase();
+                const desc = card.querySelector('p').textContent.toLowerCase();
+                card.style.display = val === '' || ref.includes(val) || desc.includes(val) ? '' : 'none';
+            });
+        });
+        searchBtn.addEventListener('click', () => searchInput.dispatchEvent(new Event('input')));
+
+        // Плавная прокрутка по якорям
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', e => {
+                e.preventDefault();
+                document.querySelector(link.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
 </body>
 </html>
