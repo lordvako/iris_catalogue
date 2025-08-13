@@ -3,144 +3,192 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Полный каталог запчастей EVOLUTION 12/16 - IRIS</title>
+    <title>Полный каталог EVOLUTION 12/16 - IRIS</title>
+    <link rel="stylesheet" href="static/css/styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <style>
-        /* Все стили остаются такими же как в предыдущем варианте */
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Roboto', sans-serif; background: #f8f9fa; color: #333; line-height: 1.6; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        /* ... (остальные стили без изменений) ... */
-    </style>
 </head>
 <body>
-    <!-- Шапка и навигация (без изменений) -->
-    <header class="iris-header">...</header>
-    <nav class="iris-nav">...</nav>
+    <!-- Header (оставляем как было) -->
+    <header class="iris-header">
+        <div class="container">
+            <div class="logo">
+                <h1>IRIS <span>Catalog</span></h1>
+                <p>EVOLUTION 12/16 Spare Parts</p>
+            </div>
+            <div class="header-tools">
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="Search by REF number..." autocomplete="off">
+                    <button id="searchBtn"><i class="fas fa-search"></i></button>
+                    <div id="searchResults" class="search-results-dropdown"></div>
+                </div>
+            </div>
+        </div>
+    </header>
 
+    <!-- Navigation (оставляем как было) -->
+    <nav class="iris-nav">
+        <div class="container">
+            <ul class="nav-list">
+                <li><a href="#electronics" class="nav-link active">Electronics</a></li>
+                <li><a href="#pc-iris" class="nav-link">PC IRIS</a></li>
+                <li><a href="#cables" class="nav-link">Cables</a></li>
+                <li><a href="#optics" class="nav-link">Optics & Lighting</a></li>
+                <li><a href="#encoder" class="nav-link">Encoder</a></li>
+                <li><a href="#spacer" class="nav-link">Spacer</a></li>
+                <li><a href="#pneumatic" class="nav-link">Pneumatic</a></li>
+                <li><a href="#others" class="nav-link">Others</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
     <main class="iris-main">
         <div class="container">
             <section class="hero">
-                <h2>Полный каталог запчастей</h2>
-                <p>EVOLUTION 12/16 - Все компоненты</p>
+                <h2>Complete Spare Parts Catalog</h2>
+                <p>For EVOLUTION 12/16 inspection machines</p>
             </section>
 
-            <!-- Электроника -->
+            <!-- Electronics Section -->
             <section id="electronics" class="section">
-                <h2 class="section-title">Электроника</h2>
+                <h2 class="section-title">Electronics</h2>
                 <div class="parts-grid">
+                    <!-- Fuses -->
                     <div class="part-card" data-ref="ED018">
                         <div class="part-image" onclick="openModal('ED018')">
-                            <img src="static/images/extracted/ED018.jpg" alt="Предохранитель 500mA 250V">
+                            <img src="static/images/extracted/ED018.jpg" alt="Fuse 500mA 250V">
                             <div class="zoom-overlay"><i class="fas fa-search-plus"></i></div>
                         </div>
                         <div class="part-info">
-                            <h3>ED018</h3>
-                            <p>Предохранитель 500mA 250V</p>
+                            <h3 class="part-ref">ED018</h3>
+                            <p class="part-desc">Fuse 500mA 250V</p>
                             <button class="download-btn" onclick="downloadImage('ED018')">
-                                <i class="fas fa-download"></i> Скачать
+                                <i class="fas fa-download"></i> Download
                             </button>
                         </div>
                     </div>
 
                     <div class="part-card" data-ref="ED019">
                         <div class="part-image" onclick="openModal('ED019')">
-                            <img src="static/images/extracted/ED019.jpg" alt="Предохранитель 10A 250V">
+                            <img src="static/images/extracted/ED019.jpg" alt="Fuse 10A 250V">
                             <div class="zoom-overlay"><i class="fas fa-search-plus"></i></div>
                         </div>
                         <div class="part-info">
-                            <h3>ED019</h3>
-                            <p>Предохранитель 10A 250V</p>
+                            <h3 class="part-ref">ED019</h3>
+                            <p class="part-desc">Fuse 10A 250V</p>
                             <button class="download-btn" onclick="downloadImage('ED019')">
-                                <i class="fas fa-download"></i> Скачать
+                                <i class="fas fa-download"></i> Download
                             </button>
                         </div>
                     </div>
 
-                    <!-- Добавлены ВСЕ электронные компоненты -->
-                    <div class="part-card" data-ref="ED020">
-                        <div class="part-image" onclick="openModal('ED020')">
-                            <img src="static/images/extracted/ED020.jpg" alt="Предохранитель 1A 250V">
-                            <div class="zoom-overlay"><i class="fas fa-search-plus"></i></div>
-                        </div>
-                        <div class="part-info">
-                            <h3>ED020</h3>
-                            <p>Предохранитель 1A 250V</p>
-                            <button class="download-btn" onclick="downloadImage('ED020')">
-                                <i class="fas fa-download"></i> Скачать
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="part-card" data-ref="ED021">
-                        <div class="part-image" onclick="openModal('ED021')">
-                            <img src="static/images/extracted/ED021.jpg" alt="Реле 24V">
-                            <div class="zoom-overlay"><i class="fas fa-search-plus"></i></div>
-                        </div>
-                        <div class="part-info">
-                            <h3>ED021</h3>
-                            <p>Реле 24V</p>
-                            <button class="download-btn" onclick="downloadImage('ED021')">
-                                <i class="fas fa-download"></i> Скачать
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- Продолжаем добавлять все компоненты по аналогии -->
+                    <!-- Добавьте все остальные электронные компоненты по аналогии -->
                     <!-- Пример для платы: -->
                     <div class="part-card" data-ref="K190753-2">
                         <div class="part-image" onclick="openModal('K190753-2')">
-                            <img src="static/images/extracted/K190753-2.jpg" alt="Плата трекинга">
+                            <img src="static/images/extracted/K190753-2.jpg" alt="Tracking Board">
                             <div class="zoom-overlay"><i class="fas fa-search-plus"></i></div>
                         </div>
                         <div class="part-info">
-                            <h3>K190753-2</h3>
-                            <p>Плата трекинга</p>
+                            <h3 class="part-ref">K190753-2</h3>
+                            <p class="part-desc">Tracking Board</p>
                             <button class="download-btn" onclick="downloadImage('K190753-2')">
-                                <i class="fas fa-download"></i> Скачать
+                                <i class="fas fa-download"></i> Download
                             </button>
                         </div>
                     </div>
-
-                    <!-- Добавьте все остальные компоненты из вашего каталога -->
                 </div>
             </section>
 
-            <!-- Оптика и освещение -->
-            <section id="optics" class="section">
-                <h2 class="section-title">Оптика и освещение</h2>
-                <div class="parts-grid">
-                    <div class="part-card" data-ref="HV013">
-                        <div class="part-image" onclick="openModal('HV013')">
-                            <img src="static/images/extracted/HV013.jpg" alt="Маттовый диффузор">
-                            <div class="zoom-overlay"><i class="fas fa-search-plus"></i></div>
-                        </div>
-                        <div class="part-info">
-                            <h3>HV013</h3>
-                            <p>Маттовый диффузор</p>
-                            <button class="download-btn" onclick="downloadImage('HV013')">
-                                <i class="fas fa-download"></i> Скачать
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- Добавьте все оптические компоненты -->
-                </div>
-            </section>
-
-            <!-- Продолжаем добавлять другие категории -->
+            <!-- Добавьте другие разделы каталога -->
         </div>
     </main>
 
-    <!-- Модальное окно и футер (без изменений) -->
-    <div id="imageModal" class="modal">...</div>
-    <footer class="iris-footer">...</footer>
+    <!-- Modal Window -->
+    <div id="imageModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img id="modalImage" src="">
+            <div class="modal-info">
+                <h3 id="modalTitle"></h3>
+                <p id="modalDesc"></p>
+            </div>
+        </div>
+    </div>
 
+    <!-- Footer -->
+    <footer class="iris-footer">
+        <div class="container">
+            <p>&copy; 2025 IRIS Inspection machines. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="static/js/script.js"></script>
     <script>
-        // Весь JavaScript остается без изменений
-        function openModal(ref) { ... }
-        // ... остальные функции ...
+        // JavaScript-код из script.js
+        function openModal(ref) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalDesc = document.getElementById('modalDesc');
+            
+            const partCard = document.querySelector(`.part-card[data-ref="${ref}"]`);
+            const imgSrc = partCard.querySelector('img').src;
+            const desc = partCard.querySelector('.part-desc').textContent;
+            
+            modalImg.src = imgSrc;
+            modalTitle.textContent = ref;
+            modalDesc.textContent = desc;
+            modal.style.display = "block";
+        }
+
+        document.querySelector('.close').addEventListener('click', function() {
+            document.getElementById('imageModal').style.display = "none";
+        });
+
+        window.addEventListener('click', function(event) {
+            if (event.target === document.getElementById('imageModal')) {
+                document.getElementById('imageModal').style.display = "none";
+            }
+        });
+
+        function downloadImage(ref) {
+            const partCard = document.querySelector(`.part-card[data-ref="${ref}"]`);
+            const imgSrc = partCard.querySelector('img').src;
+            
+            const link = document.createElement('a');
+            link.href = imgSrc;
+            link.download = `${ref}.jpg`;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+        // Search functionality
+        document.getElementById('searchInput').addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase();
+            document.querySelectorAll('.part-card').forEach(part => {
+                const ref = part.getAttribute('data-ref').toLowerCase();
+                part.style.display = ref.includes(searchTerm) ? 'flex' : 'none';
+            });
+        });
+
+        // Navigation
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                document.querySelector(targetId).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                
+                document.querySelectorAll('.nav-link').forEach(navLink => {
+                    navLink.classList.remove('active');
+                });
+                this.classList.add('active');
+            });
+        });
     </script>
 </body>
 </html>
