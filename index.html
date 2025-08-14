@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>IRIS Catalog – EVOLUTION 12/16</title>
- <style>
+  <style>
 :root{font-size:16px}
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:'Roboto',Arial,sans-serif;background:#f8f9fa;color:#333;line-height:1.6}
@@ -13,10 +13,9 @@ body{font-family:'Roboto',Arial,sans-serif;background:#f8f9fa;color:#333;line-he
 .iris-header img{max-width:60px;height:auto;margin-right:1rem;border-radius:4px}
 #searchInput{padding:.5rem 1rem;border:1px solid #ccc;border-radius:20px;width:100%;max-width:300px;font-size:1rem;margin-top:.5rem}
 .nav-list{display:flex;gap:1rem;flex-wrap:wrap;list-style:none;margin:0;padding:1rem 0}
-.nav-link{color:#3949ab;text-decoration:none;font-weight:600;font-size:1.1rem;padding:.5rem 1rem;border-radius:6px;transition:background .3s,color .3s}
-.nav-link:hover{background:#3949ab;color:#fff}
+.nav-link{color:#fff;text-decoration:none;font-weight:600;font-size:1.1rem;padding:.5rem 1rem;border-radius:6px;transition:background .3s}
 .section{margin:2rem 0}
-.section h2{color:#1a237e;margin-bottom:1rem}
+.section h2{margin-bottom:1rem;padding:.5rem 1rem;border-radius:6px;color:#fff;font-size:1.4rem}
 .parts-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:.75rem}
 .part-card{background:#fff;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.15);cursor:pointer;overflow:hidden}
 .part-card img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:6px}
@@ -41,7 +40,17 @@ body{font-family:'Roboto',Arial,sans-serif;background:#f8f9fa;color:#333;line-he
   .sidebar{width:100%;right:-100%;padding:1rem}
   .sidebar.open{right:0}
 }
-</style>
+
+/* ---------- Section Colors ---------- */
+.nav-link[href="#electronics"],       #electronics h2{background:#ff7043}
+.nav-link[href="#pc-iris"],          #pc-iris h2{background:#42a5f5}
+.nav-link[href="#cables"],           #cables h2{background:#66bb6a}
+.nav-link[href="#optics"],           #optics h2{background:#ab47bc}
+.nav-link[href="#encoder"],          #encoder h2{background:#ef5350}
+.nav-link[href="#spacer"],           #spacer h2{background:#ffa726}
+.nav-link[href="#pneumatic"],        #pneumatic h2{background:#26c6da}
+.nav-link[href="#others"],           #others h2{background:#78909c}
+  </style>
 </head>
 <body>
 <header class="iris-header">
@@ -70,7 +79,6 @@ body{font-family:'Roboto',Arial,sans-serif;background:#f8f9fa;color:#333;line-he
   <section id="electronics">
     <h2>Electronics & Electricity</h2>
     <div class="parts-grid">
-      <!-- 15 -->
       <div class="part-card" data-ref="ED018" data-place="tracking_place.jpg" data-extra="Compact fuse 5×20 mm.">
         <img src="static/images/extracted/ED018.jpg" alt="ED018"><h3>ED018</h3></div>
       <div class="part-card" data-ref="ED019" data-place="tracking_place.jpg" data-extra="High-current fuse 10 A 250 V.">
@@ -233,7 +241,7 @@ body{font-family:'Roboto',Arial,sans-serif;background:#f8f9fa;color:#333;line-he
       document.getElementById('sidebarDesc').textContent = desc;
       document.getElementById('sidebarPlace').src = 'static/images/extracted/' + place;
       document.getElementById('sidebar').classList.add('open');
-      document.body.classList.add('sidebar-open'); /* чтобы сдвинуть контент */
+      document.body.classList.add('sidebar-open');
     }));
     document.getElementById('sidebarClose').addEventListener('click', () => {
       document.getElementById('sidebar').classList.remove('open');
@@ -250,7 +258,3 @@ body{font-family:'Roboto',Arial,sans-serif;background:#f8f9fa;color:#333;line-he
   </script>
 </body>
 </html>
-
-
-
-
