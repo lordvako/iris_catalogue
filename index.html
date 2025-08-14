@@ -13,14 +13,14 @@
 *{margin:0;padding:0;box-sizing:border-box}
 body{background:#f8f9fa;color:#333;line-height:1.6}
 .container{max-width:1200px;margin:0 auto;padding:0 1rem}
-.iris-header{display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#d0d9ff 0%,#bdc7ff 100%);color:#222;padding:1rem;text-align:center;flex-wrap:wrap}
+.iris-header{display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#1a237e 0%,#3949ab 100%);color:#fff;padding:1rem;text-align:center;flex-wrap:wrap}
 .iris-header img{max-width:60px;height:auto;margin-right:1rem;border-radius:4px}
 #searchInput{padding:.5rem 1rem;border:1px solid #ccc;border-radius:20px;width:100%;max-width:300px;font-size:1rem;margin-top:.5rem}
 .nav-list{display:flex;gap:1rem;flex-wrap:wrap;list-style:none;margin:0;padding:1rem 0}
-.nav-link{color:#222;text-decoration:none;font-weight:600;padding:.5rem 1rem;border-radius:6px;transition:opacity .3s}
+.nav-link{color:#fff;text-decoration:none;font-weight:600;padding:.5rem 1rem;border-radius:6px;transition:opacity .3s}
 .nav-link:hover{opacity:.8}
 .section{margin:2rem 0;border-radius:12px;padding:1rem}
-.section h2{margin-bottom:1rem;color:#222;font-size:1.5rem;font-weight:700}
+.section h2{margin-bottom:1rem;color:#fff;font-size:1.5rem;font-weight:700}
 .parts-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:.75rem}
 .part-card{background:#ffffffdb;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.15);cursor:pointer;overflow:hidden;transition:transform .2s}
 .part-card:hover{transform:translateY(-2px)}
@@ -47,25 +47,25 @@ body{background:#f8f9fa;color:#333;line-height:1.6}
   .sidebar.open{right:0}
 }
 
-/* ---------- Section Soft Gradients ---------- */
-#electronics{background:linear-gradient(135deg,#f5f7fa 0%,#e4e8f0 100%)}
-#pc-iris{background:linear-gradient(135deg,#f1f5f9 0%,#e2e8f0 100%)}
-#cables{background:linear-gradient(135deg,#fafafa 0%,#e8e8e8 100%)}
-#optics{background:linear-gradient(135deg,#f0f4f8 0%,#d9e2ec 100%)}
-#encoder{background:linear-gradient(135deg,#fdf2f8 0%,#f3e8ff 100%)}
-#spacer{background:linear-gradient(135deg,#f3f4f6 0%,#e5e7eb 100%)}
-#pneumatic{background:linear-gradient(135deg,#fefce8 0%,#fef3c7 100%)}
-#others{background:linear-gradient(135deg,#f0f9ff 0%,#dbeafe 100%)}
+/* ---------- Soft Blue Gradients ---------- */
+#electronics{background:linear-gradient(135deg,#e3eaf7 0%,#c8d4f0 100%)}
+#pc-iris{background:linear-gradient(135deg,#d9e4f5 0%,#bdcfeb 100%)}
+#cables{background:linear-gradient(135deg,#e8eef9 0%,#d0ddf5 100%)}
+#optics{background:linear-gradient(135deg,#dee8f7 0%,#c3d3f0 100%)}
+#encoder{background:linear-gradient(135deg,#e5ecf8 0%,#cdd9f1 100%)}
+#spacer{background:linear-gradient(135deg,#e0e8f5 0%,#c7d4ef 100%)}
+#pneumatic{background:linear-gradient(135deg,#e6ecf9 0%,#cfd9f2 100%)}
+#others{background:linear-gradient(135deg,#dfe6f6 0%,#c5d3ef 100%)}
 
-/* Nav links inherit section gradient */
-.nav-link[href="#electronics"]{background:linear-gradient(135deg,#f5f7fa 0%,#e4e8f0 100%);color:#222}
-.nav-link[href="#pc-iris"]{background:linear-gradient(135deg,#f1f5f9 0%,#e2e8f0 100%);color:#222}
-.nav-link[href="#cables"]{background:linear-gradient(135deg,#fafafa 0%,#e8e8e8 100%);color:#222}
-.nav-link[href="#optics"]{background:linear-gradient(135deg,#f0f4f8 0%,#d9e2ec 100%);color:#222}
-.nav-link[href="#encoder"]{background:linear-gradient(135deg,#fdf2f8 0%,#f3e8ff 100%);color:#222}
-.nav-link[href="#spacer"]{background:linear-gradient(135deg,#f3f4f6 0%,#e5e7eb 100%);color:#222}
-.nav-link[href="#pneumatic"]{background:linear-gradient(135deg,#fefce8 0%,#fef3c7 100%);color:#222}
-.nav-link[href="#others"]{background:linear-gradient(135deg,#f0f9ff 0%,#dbeafe 100%);color:#222}
+/* Nav links inherit blue gradient */
+.nav-link[href="#electronics"]{background:linear-gradient(135deg,#e3eaf7 0%,#c8d4f0 100%);color:#1a237e}
+.nav-link[href="#pc-iris"]{background:linear-gradient(135deg,#d9e4f5 0%,#bdcfeb 100%);color:#1a237e}
+.nav-link[href="#cables"]{background:linear-gradient(135deg,#e8eef9 0%,#d0ddf5 100%);color:#1a237e}
+.nav-link[href="#optics"]{background:linear-gradient(135deg,#dee8f7 0%,#c3d3f0 100%);color:#1a237e}
+.nav-link[href="#encoder"]{background:linear-gradient(135deg,#e5ecf8 0%,#cdd9f1 100%);color:#1a237e}
+.nav-link[href="#spacer"]{background:linear-gradient(135deg,#e0e8f5 0%,#c7d4ef 100%);color:#1a237e}
+.nav-link[href="#pneumatic"]{background:linear-gradient(135deg,#e6ecf9 0%,#cfd9f2 100%);color:#1a237e}
+.nav-link[href="#others"]{background:linear-gradient(135deg,#dfe6f6 0%,#c5d3ef 100%);color:#1a237e}
   </style>
 </head>
 
