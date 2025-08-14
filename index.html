@@ -1,171 +1,168 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>IRIS Catalog – EVOLUTION 12/16</title>
-  <style>
-    body{font-family:'Roboto',Arial,sans-serif;margin:0;background:#f8f9fa;color:#333}
-    .iris-header{background:linear-gradient(135deg,#1a237e 0%,#3949ab 100%);color:#fff;padding:1rem}
-    .container{max-width:1200px;margin:0 auto;padding:1rem}
-    .search-container{margin:1rem 0}
-    #searchInput{padding:.5rem 1rem;border:1px solid #ccc;border-radius:20px;width:100%;max-width:300px}
-    .nav-list{display:flex;gap:1rem;flex-wrap:wrap;list-style:none;margin:0;padding:1rem 0;background:#fff}
-    .nav-link{color:#1a237e;text-decoration:none;font-weight:500}
-    .section{margin:2rem 0}
-    .section h2{color:#1a237e;margin-bottom:1rem}
-    .parts-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1rem}
-    .part-card{background:#fff;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.15);cursor:pointer;overflow:hidden}
-    .part-card img{width:100%;height:120px;object-fit:cover}
-    .part-card h3{margin:.5rem;font-size:1rem;text-align:center;color:#1a237e}
-    .sidebar{position:fixed;top:0;right:-400px;width:400px;height:100%;background:#fff;box-shadow:-4px 0 12px rgba(0,0,0,.3);z-index:1000;transition:right .4s ease;padding:1rem}
-    .sidebar.open{right:0}
-    #sidebarClose{background:none;border:none;font-size:2rem;cursor:pointer}
-  </style>
+  <link rel="stylesheet" href="static/css/styles.css">
 </head>
 <body>
-<header class="iris-header">
-  <div class="container">
-    <h1>IRIS Catalog</h1>
-    <input type="text" id="searchInput" placeholder="Поиск…">
-  </div>
-</header>
-
-<main class="container">
-  <!-- Electronics -->
-  <section id="electronics">
-    <h2>Electronics</h2>
-    <div class="parts-grid">
-      <!-- 15 элементов -->
-      <div class="part-card" data-ref="ED018" data-place="fuse_place.jpg" data-extra="Compact fuse 5×20 mm.">
-        <img src="static/images/extracted/ED018.jpg" alt="ED018"><h3>ED018</h3></div>
-      <div class="part-card" data-ref="ED019" data-place="fuse_place.jpg" data-extra="High-current fuse.">
-        <img src="static/images/extracted/ED019.jpg" alt="ED019"><h3>ED019</h3></div>
-      <div class="part-card" data-ref="K190753-2" data-place="tracking_place.jpg" data-extra="Tracking board.">
-        <img src="static/images/extracted/K190753-2.jpg" alt="K190753-2"><h3>K190753-2</h3></div>
-      <div class="part-card" data-ref="K260301-0" data-place="spider2_place.jpg" data-extra="Alimentation +5V/+-15V">
-        <img src="static/images/extracted/K260301-0.jpg" alt="K260301-0"><h3>K260301-0</h3></div>
-      <div class="part-card" data-ref="ED804" data-place="tracking_place.jpg" data-extra="Power supply 300 W.">
-        <img src="static/images/extracted/ED804.jpg" alt="ED804"><h3>ED804</h3></div>
-      <div class="part-card" data-ref="K108019" data-place="tracking_place.jpg" data-extra="PC104 board.">
-        <img src="static/images/extracted/K108019.jpg" alt="K108019"><h3>K108019</h3></div>
-      <div class="part-card" data-ref="K190777-1" data-place="tracking_place.jpg" data-extra="Encoder board.">
-        <img src="static/images/extracted/K190777-1.jpg" alt="K190777-1"><h3>K190777-1</h3></div>
-      <div class="part-card" data-ref="K190801-1" data-place="tracking_place.jpg" data-extra="Analogic type 1.">
-        <img src="static/images/extracted/K190801-1.jpg" alt="K190801-1"><h3>K190801-1</h3></div>
-      <div class="part-card" data-ref="K190801-2" data-place="tracking_place.jpg" data-extra="Analogic type 2.">
-        <img src="static/images/extracted/K190801-1.jpg" alt="K190801-2"><h3>K190801-2</h3></div>
-      <div class="part-card" data-ref="K190801-3" data-place="tracking_place.jpg" data-extra="Analogic type 3.">
-        <img src="static/images/extracted/K190801-1.jpg" alt="K190801-3"><h3>K190801-3</h3></div>
-      <div class="part-card" data-ref="K191188" data-place="tracking_place.jpg" data-extra="Numeric board.">
-        <img src="static/images/extracted/K191188.jpg" alt="K191188"><h3>K191188</h3></div>
-      <div class="part-card" data-ref="K190874" data-place="tracking_place.jpg" data-extra="Spider 1 V1.">
-        <img src="static/images/extracted/K190874.jpg" alt="K190874"><h3>K190874</h3></div>
-      <div class="part-card" data-ref="K190874-1B" data-place="tracking_place.jpg" data-extra="Spider 1 V2.">
-        <img src="static/images/extracted/K190874-1B.jpg" alt="K190874-1B"><h3>K190874-1B</h3></div>
-      <div class="part-card" data-ref="ED789" data-place="tracking_place.jpg" data-extra="Power supply 24V 5V.">
-        <img src="static/images/extracted/ED789.jpg" alt="ED789"><h3>ED789</h3></div>
-      <div class="part-card" data-ref="ED790" data-place="tracking_place.jpg" data-extra="Power supply 24V ±15V.">
-        <img src="static/images/extracted/ED790.jpg" alt="ED790"><h3>ED790</h3></div>
+  <!-- Header with ESP022 logo -->
+  <header class="iris-header">
+    <div class="container">
+      <img src="static/images/extracted/ESP022.jpg" alt="Logo" class="header-logo">
+      <h1>IRIS <span>Catalog</span></h1>
+      <p>EVOLUTION 12/16 Spare Parts</p>
+      <input type="text" id="searchInput" placeholder="Search by REF/description…">
     </div>
-  </section>
+  </header>
 
-  <section id="pc-iris">
-    <h2>PC IRIS</h2>
-    <div class="parts-grid">
-      <div class="part-card" data-ref="HV316" data-place="pc_place.jpg" data-extra="PC Iris HD EVO 16.">
-        <img src="static/images/extracted/HV316.jpg" alt="HV316"><h3>HV316</h3></div>
-      <div class="part-card" data-ref="HV305" data-place="pc_place.jpg" data-extra="PC Iris HD EVO 5.">
-        <img src="static/images/extracted/HV305.jpg" alt="HV305"><h3>HV305</h3></div>
-      <div class="part-card" data-ref="HV312" data-place="pc_place.jpg" data-extra="PC Iris HD EVO 12.">
-        <img src="static/images/extracted/HV312.jpg" alt="HV312"><h3>HV312</h3></div>
-      <div class="part-card" data-ref="HV316NEO" data-place="pc_place.jpg" data-extra="PC Iris HD EVO 16NEO.">
-        <img src="static/images/extracted/HV316NEO.jpg" alt="HV316NEO"><h3>HV316NEO</h3></div>
-      <div class="part-card" data-ref="HV006T" data-place="pc_place.jpg" data-extra="Vision board.">
-        <img src="static/images/extracted/HV006T.jpg" alt="HV006T"><h3>HV006T</h3></div>
-      <div class="part-card" data-ref="HV156" data-place="pc_place.jpg" data-extra="Graphic board NG PC.">
-        <img src="static/images/extracted/HV156.jpg" alt="HV156"><h3>HV156</h3></div>
+  <!-- Navigation -->
+  <nav class="iris-nav">
+    <div class="container">
+      <ul class="nav-list">
+        <li><a href="#electronics" class="nav-link">Electronics</a></li>
+        <li><a href="#pc-iris" class="nav-link">PC IRIS</a></li>
+        <li><a href="#cables" class="nav-link">Cables</a></li>
+        <li><a href="#optics" class="nav-link">Optics & Lighting</a></li>
+        <li><a href="#encoder" class="nav-link">Encoder</a></li>
+        <li><a href="#spacer" class="nav-link">Spacers</a></li>
+        <li><a href="#pneumatic" class="nav-link">Pneumatic</a></li>
+        <li><a href="#others" class="nav-link">Others</a></li>
+      </ul>
     </div>
-  </section>
+  </nav>
 
-  <section id="cables">
-    <h2>Cables</h2>
-    <div class="parts-grid">
-      <div class="part-card" data-ref="K182193" data-place="cables_place.jpg" data-extra="Encoder cable 10 m.">
-        <img src="static/images/extracted/K182193.jpg" alt="K182193"><h3>K182193</h3></div>
-      <div class="part-card" data-ref="HCBL162" data-place="cables_place.jpg" data-extra="Cell cable 5 m.">
-        <img src="static/images/extracted/HCBL162.jpg" alt="HCBL162"><h3>HCBL162</h3></div>
-      <div class="part-card" data-ref="K181383-300C" data-place="cables_place.jpg" data-extra="Camera cable 3 m.">
-        <img src="static/images/extracted/K181383-300C.jpg" alt="K181383-300C"><h3>K181383-300C</h3></div>
-      <div class="part-card" data-ref="K181383-500C" data-place="cables_place.jpg" data-extra="Camera cable 5 m.">
-        <img src="static/images/extracted/K181383-500C.jpg" alt="K181383-500C"><h3>K181383-500C</h3></div>
-      <div class="part-card" data-ref="K181383-700" data-place="cables_place.jpg" data-extra="Camera cable 7 m.">
-        <img src="static/images/extracted/K181383-700.jpg" alt="K181383-700"><h3>K181383-700</h3></div>
-    </div>
-  </section>
+  <main class="container">
+    <!-- Electronics -->
+    <section id="electronics">
+      <h2>Electronics & Electricity</h2>
+      <div class="parts-grid">
+        <div class="part-card" data-ref="ED018" data-place="tracking_place.jpg" data-extra="Compact fuse 5×20 mm, power-supply modules.">
+          <img src="static/images/extracted/ED018.jpg" alt="ED018"><h3>ED018</h3></div>
+        <div class="part-card" data-ref="ED019" data-place="tracking_place.jpg" data-extra="High-current fuse 10 A 250 V.">
+          <img src="static/images/extracted/ED019.jpg" alt="ED019"><h3>ED019</h3></div>
+        <div class="part-card" data-ref="ED020" data-place="tracking_place.jpg" data-extra="Small 1A fuse.">
+          <img src="static/images/extracted/ED020.jpg" alt="ED020"><h3>ED020</h3></div>
+        <div class="part-card" data-ref="ED021" data-place="tracking_place.jpg" data-extra="24 V relay.">
+          <img src="static/images/extracted/ED021.jpg" alt="ED021"><h3>ED021</h3></div>
+        <div class="part-card" data-ref="ED804" data-place="tracking_place.jpg" data-extra="Power supply 300 W.">
+          <img src="static/images/extracted/ED804.jpg" alt="ED804"><h3>ED804</h3></div>
+        <div class="part-card" data-ref="K108019" data-place="tracking_place.jpg" data-extra="PC104 board.">
+          <img src="static/images/extracted/K108019.jpg" alt="K108019"><h3>K108019</h3></div>
+        <div class="part-card" data-ref="K190753-2" data-place="tracking_place.jpg" data-extra="Tracking board.">
+          <img src="static/images/extracted/K190753-2.jpg" alt="K190753-2"><h3>K190753-2</h3></div>
+        <div class="part-card" data-ref="K190777-1" data-place="tracking_place.jpg" data-extra="Encoder board.">
+          <img src="static/images/extracted/K190777-1.jpg" alt="K190777-1"><h3>K190777-1</h3></div>
+        <div class="part-card" data-ref="K190801-1" data-place="tracking_place.jpg" data-extra="Intcam Analogic type 1.">
+          <img src="static/images/extracted/K190801-1.jpg" alt="K190801-1"><h3>K190801-1</h3></div>
+        <div class="part-card" data-ref="K190801-2" data-place="tracking_place.jpg" data-extra="Intcam Analogic type 2.">
+          <img src="static/images/extracted/K190801-2.jpg" alt="K190801-2"><h3>K190801-2</h3></div>
+        <div class="part-card" data-ref="K190801-3" data-place="tracking_place.jpg" data-extra="Intcam Analogic type 3.">
+          <img src="static/images/extracted/K190801-3.jpg" alt="K190801-3"><h3>K190801-3</h3></div>
+        <div class="part-card" data-ref="K191188" data-place="tracking_place.jpg" data-extra="Numeric Intcam board.">
+          <img src="static/images/extracted/K191188.jpg" alt="K191188"><h3>K191188</h3></div>
+        <div class="part-card" data-ref="K190874" data-place="tracking_place.jpg" data-extra="Spider 1 Board V1.">
+          <img src="static/images/extracted/K190874.jpg" alt="K190874"><h3>K190874</h3></div>
+        <div class="part-card" data-ref="K190874-1B" data-place="tracking_place.jpg" data-extra="Spider 1 Board V2.">
+          <img src="static/images/extracted/K190874-1B.jpg" alt="K190874-1B"><h3>K190874-1B</h3></div>
+        <div class="part-card" data-ref="K260301-0" data-place="tracking_place.jpg" data-extra="Spider 2Board NG (2022).">
+          <img src="static/images/extracted/K260301-0.jpg" alt="K260301-0"><h3>K260301-0</h3></div>
+      </div>
+    </section>
 
-  <section id="optics">
-    <h2>Optic</h2>
-    <div class="parts-grid">
-      <div class="part-card" data-ref="HV150" data-place="optics_place.jpg" data-extra="6 mm focal lens.">
-        <img src="static/images/extracted/HV150.jpg" alt="HV150"><h3>HV150</h3></div>
-      <div class="part-card" data-ref="HV155" data-place="optics_place.jpg" data-extra="8 mm focal lens.">
-        <img src="static/images/extracted/HV155.jpg" alt="HV155"><h3>HV155</h3></div>
-      <div class="part-card" data-ref="HV160" data-place="optics_place.jpg" data-extra="12 mm focal lens.">
-        <img src="static/images/extracted/HV160.jpg" alt="HV160"><h3>HV160</h3></div>
-      <div class="part-card" data-ref="HV163" data-place="optics_place.jpg" data-extra="16 mm focal lens.">
-        <img src="static/images/extracted/HV163.jpg" alt="HV163"><h3>HV163</h3></div>
-      <div class="part-card" data-ref="HV166" data-place="optics_place.jpg" data-extra="25 mm focal lens.">
-        <img src="static/images/extracted/HV166.jpg" alt="HV166"><h3>HV166</h3></div>
-      <div class="part-card" data-ref="MK500497" data-place="optics_place.jpg" data-extra="Full set neon light source.">
-        <img src="static/images/extracted/MK500497.jpg" alt="MK500497"><h3>MK500497</h3></div>
-    </div>
-  </section>
+    <section id="pc-iris">
+      <h2>PC IRIS</h2>
+      <div class="parts-grid">
+        <div class="part-card" data-ref="HV316" data-place="pc_place.jpg" data-extra="PC Iris HD EVO 16.">
+          <img src="static/images/extracted/HV316.jpg" alt="HV316"><h3>HV316</h3></div>
+        <div class="part-card" data-ref="HV305" data-place="pc_place.jpg" data-extra="PC Iris HD EVO 5.">
+          <img src="static/images/extracted/HV305.jpg" alt="HV305"><h3>HV305</h3></div>
+        <div class="part-card" data-ref="HV312" data-place="pc_place.jpg" data-extra="PC Iris HD EVO 12.">
+          <img src="static/images/extracted/HV312.jpg" alt="HV312"><h3>HV312</h3></div>
+        <div class="part-card" data-ref="HV316NEO" data-place="pc_place.jpg" data-extra="PC Iris HD EVO 16NEO.">
+          <img src="static/images/extracted/HV316NEO.jpg" alt="HV316NEO"><h3>HV316NEO</h3></div>
+        <div class="part-card" data-ref="HV006T" data-place="pc_place.jpg" data-extra="Vision board.">
+          <img src="static/images/extracted/HV006T.jpg" alt="HV006T"><h3>HV006T</h3></div>
+        <div class="part-card" data-ref="HV156" data-place="pc_place.jpg" data-extra="Graphic board NG PC.">
+          <img src="static/images/extracted/HV156.jpg" alt="HV156"><h3>HV156</h3></div>
+      </div>
+    </section>
 
-  <section id="encoder">
-    <h2>Coder</h2>
-    <div class="parts-grid">
-      <div class="part-card" data-ref="MK500395" data-place="encoder_place.jpg" data-extra="SET Encoder + support + cable.">
-        <img src="static/images/extracted/MK500395.jpg" alt="MK500395"><h3>MK500395</h3></div>
-      <div class="part-card" data-ref="ED303" data-place="encoder_place.jpg" data-extra="Encoder 24V.">
-        <img src="static/images/extracted/ED303.jpg" alt="ED303"><h3>ED303</h3></div>
-      <div class="part-card" data-ref="ED024" data-place="encoder_place.jpg" data-extra="63 mm encoder wheel.">
-        <img src="static/images/extracted/ED024.jpg" alt="ED024"><h3>ED024</h3></div>
-      <div class="part-card" data-ref="MR018" data-place="encoder_place.jpg" data-extra="Encoder coupling.">
-        <img src="static/images/extracted/MR018.jpg" alt="MR018"><h3>MR018</h3></div>
-    </div>
-  </section>
+    <section id="cables">
+      <h2>Cables</h2>
+      <div class="parts-grid">
+        <div class="part-card" data-ref="K182193" data-place="cables_place.jpg" data-extra="Encoder cable 10 m.">
+          <img src="static/images/extracted/K182193.jpg" alt="K182193"><h3>K182193</h3></div>
+        <div class="part-card" data-ref="HCBL162" data-place="cables_place.jpg" data-extra="Cell cable 5 m.">
+          <img src="static/images/extracted/HCBL162.jpg" alt="HCBL162"><h3>HCBL162</h3></div>
+      </div>
+    </section>
 
-  <section id="spacer">
-    <h2>Spacer</h2>
-    <div class="parts-grid">
-      <div class="part-card" data-ref="ESP021" data-place="spacer_place.jpg" data-extra="Standard spacer 12 mm.">
-        <img src="static/images/extracted/ESP021.jpg" alt="ESP021"><h3>ESP021</h3></div>
-      <div class="part-card" data-ref="ESP022" data-place="spacer_place.jpg" data-extra="Easy-set spacer 12 mm.">
-        <img src="static/images/extracted/ESP022.jpg" alt="ESP022"><h3>ESP022</h3></div>
-      <div class="part-card" data-ref="ESP012" data-place="spacer_place.jpg" data-extra="Long spacer 12 mm.">
-        <img src="static/images/extracted/ESP012.jpg" alt="ESP012"><h3>ESP012</h3></div>
-    </div>
-  </section>
+    <section id="optics">
+      <h2>Optics & Lighting</h2>
+      <div class="parts-grid">
+        <div class="part-card" data-ref="HV150" data-place="optics_place.jpg" data-extra="6 mm focal lens.">
+          <img src="static/images/extracted/HV150.jpg" alt="HV150"><h3>HV150</h3></div>
+        <div class="part-card" data-ref="HV155" data-place="optics_place.jpg" data-extra="8 mm focal lens.">
+          <img src="static/images/extracted/HV155.jpg" alt="HV155"><h3>HV155</h3></div>
+        <div class="part-card" data-ref="HV160" data-place="optics_place.jpg" data-extra="12 mm focal lens.">
+          <img src="static/images/extracted/HV160.jpg" alt="HV160"><h3>HV160</h3></div>
+        <div class="part-card" data-ref="HV163" data-place="optics_place.jpg" data-extra="16 mm focal lens.">
+          <img src="static/images/extracted/HV163.jpg" alt="HV163"><h3>HV163</h3></div>
+        <div class="part-card" data-ref="HV166" data-place="optics_place.jpg" data-extra="25 mm focal lens.">
+          <img src="static/images/extracted/HV166.jpg" alt="HV166"><h3>HV166</h3></div>
+        <div class="part-card" data-ref="MK500497" data-place="optics_place.jpg" data-extra="Full set neon light source.">
+          <img src="static/images/extracted/MK500497.jpg" alt="MK500497"><h3>MK500497</h3></div>
+      </div>
+    </section>
 
-  <section id="pneumatic">
-    <h2>Pneumatic</h2>
-    <div class="parts-grid">
-      <div class="part-card" data-ref="MK200616" data-place="pneumatic_place.jpg" data-extra="Ejecteur + support.">
-        <img src="static/images/extracted/MK200616.jpg" alt="MK200616"><h3>MK200616</h3></div>
-      <div class="part-card" data-ref="PM011" data-place="pneumatic_place.jpg" data-extra="Electrovane Rejet 3/2.">
-        <img src="static/images/extracted/PM011.jpg" alt="PM011"><h3>PM011</h3></div>
-    </div>
-  </section>
+    <section id="encoder">
+      <h2>Encoder</h2>
+      <div class="parts-grid">
+        <div class="part-card" data-ref="MK500395" data-place="encoder_place.jpg" data-extra="SET Encoder + support + cable.">
+          <img src="static/images/extracted/MK500395.jpg" alt="MK500395"><h3>MK500395</h3></div>
+        <div class="part-card" data-ref="ED303" data-place="encoder_place.jpg" data-extra="Encoder 24V.">
+          <img src="static/images/extracted/ED303.jpg" alt="ED303"><h3>ED303</h3></div>
+        <div class="part-card" data-ref="ED024" data-place="encoder_place.jpg" data-extra="63 mm encoder wheel.">
+          <img src="static/images/extracted/ED024.jpg" alt="ED024"><h3>ED024</h3></div>
+        <div class="part-card" data-ref="MR018" data-place="encoder_place.jpg" data-extra="Encoder coupling.">
+          <img src="static/images/extracted/MR018.jpg" alt="MR018"><h3>MR018</h3></div>
+      </div>
+    </section>
 
-  <section id="others">
-    <h2>Other</h2>
-    <div class="parts-grid">
-      <div class="part-card" data-ref="CA009" data-place="others_place.jpg" data-extra="Inductive sensor Sick IPRK 18.">
-        <img src="static/images/extracted/CA009.jpg" alt="CA009"><h3>CA009</h3></div>
-      <div class="part-card" data-ref="HV140" data-place="others_place.jpg" data-extra="Calibration tool.">
-        <img src="static/images/extracted/HV140.jpg" alt="HV140"><h3>HV140</h3></div>
-    </div>
-  </section>
+    <section id="spacer">
+      <h2>Spacers</h2>
+      <div class="parts-grid">
+        <div class="part-card" data-ref="ESP021" data-place="spacer_place.jpg" data-extra="Standard spacer 12 mm.">
+          <img src="static/images/extracted/ESP021.jpg" alt="ESP021"><h3>ESP021</h3></div>
+        <div class="part-card" data-ref="ESP022" data-place="spacer_place.jpg" data-extra="Easy-set spacer 12 mm.">
+          <img src="static/images/extracted/ESP022.jpg" alt="ESP022"><h3>ESP022</h3></div>
+        <div class="part-card" data-ref="ESP012" data-place="spacer_place.jpg" data-extra="Long spacer 12 mm.">
+          <img src="static/images/extracted/ESP012.jpg" alt="ESP012"><h3>ESP012</h3></div>
+      </div>
+    </section>
+
+    <section id="pneumatic">
+      <h2>Pneumatic</h2>
+      <div class="parts-grid">
+        <div class="part-card" data-ref="MK200616" data-place="pneumatic_place.jpg" data-extra="Ejecteur + support.">
+          <img src="static/images/extracted/MK200616.jpg" alt="MK200616"><h3>MK200616</h3></div>
+        <div class="part-card" data-ref="PM011" data-place="pneumatic_place.jpg" data-extra="Electrovane Rejet 3/2.">
+          <img src="static/images/extracted/PM011.jpg" alt="PM011"><h3>PM011</h3></div>
+      </div>
+    </section>
+
+    <section id="others">
+      <h2>Others</h2>
+      <div class="parts-grid">
+        <div class="part-card" data-ref="CA009" data-place="others_place.jpg" data-extra="Inductive sensor Sick IPRK 18.">
+          <img src="static/images/extracted/CA009.jpg" alt="CA009"><h3>CA009</h3></div>
+        <div class="part-card" data-ref="HV140" data-place="others_place.jpg" data-extra="Calibration tool.">
+          <img src="static/images/extracted/HV140.jpg" alt="HV140"><h3>HV140</h3></div>
+      </div>
+    </section>
+  </main>
 
   <!-- Sidebar -->
   <aside id="sidebar" class="sidebar">
@@ -177,28 +174,28 @@
       <p id="sidebarExtra">
         We will try to post more additional information here. For example, in which versions are used, whether it is currently being released. Is there an opportunity to buy locally.
       </p>
-      <img id="sidebarPlace" src="" alt="Расположение">
+      <img id="sidebarPlace" src="" alt="Location">
     </div>
   </aside>
 
   <script>
+    /* header scroll */
     document.querySelectorAll('.nav-link').forEach(l => l.addEventListener('click', e => {
       e.preventDefault();
       document.querySelector(l.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
     }));
-    document.querySelectorAll('.part-card').forEach(card => {
-      card.addEventListener('click', () => {
-        const ref   = card.dataset.ref;
-        const desc  = card.dataset.extra;
-        const place = card.dataset.place;
-        const img   = card.querySelector('img').src.split('/').pop();
-        document.getElementById('sidebarTitle').textContent = ref;
-        document.getElementById('sidebarImg').src   = 'static/images/extracted/' + img;
-        document.getElementById('sidebarDesc').textContent = desc;
-        document.getElementById('sidebarPlace').src = 'static/images/extracted/' + place;
-        document.getElementById('sidebar').classList.add('open');
-      });
-    });
+    /* sidebar */
+    document.querySelectorAll('.part-card').forEach(c => c.addEventListener('click', () => {
+      const ref   = c.dataset.ref;
+      const desc  = c.dataset.extra;
+      const place = c.dataset.place;
+      const img   = c.querySelector('img').src.split('/').pop();
+      document.getElementById('sidebarTitle').textContent = ref;
+      document.getElementById('sidebarImg').src   = 'static/images/extracted/' + img;
+      document.getElementById('sidebarDesc').textContent = desc;
+      document.getElementById('sidebarPlace').src = 'static/images/extracted/' + place;
+      document.getElementById('sidebar').classList.add('open');
+    }));
     document.getElementById('sidebarClose').addEventListener('click', () => {
       document.getElementById('sidebar').classList.remove('open');
     });
@@ -213,4 +210,3 @@
   </script>
 </body>
 </html>
-
