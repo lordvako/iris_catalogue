@@ -1,4 +1,19 @@
 /* Reset & Base */
+/* адаптивное всплывающее окно */
+@media (max-width: 600px) {
+  .sidebar {
+    width: 100%;
+    height: 100%;
+    right: -100%;
+    border-radius: 0;
+  }
+  .sidebar.open {
+    right: 0;
+  }
+  #sidebarImg {
+    max-height: 40vh;
+  }
+}
 .part-card {
     width: 200px;
     height: 200px;
@@ -403,4 +418,5 @@ body {
     }
 
 }
+
 
