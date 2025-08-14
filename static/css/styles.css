@@ -230,3 +230,25 @@ body {
     max-height: 40vh;
   }
 }
+@media (max-width: 600px) {
+  /* логотип не должен вылезать за экран */
+  .iris-header img {
+    max-width: 60px;
+    height: auto;
+  }
+
+  /* сам хедер перестраиваем в колонку, чтобы всё помещалось */
+  .iris-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  /* поиск растягиваем на всю ширину и делаем видимым */
+  #searchInput {
+    width: 100%;
+    max-width: none;
+    margin-top: 0.5rem;
+  }
+}
