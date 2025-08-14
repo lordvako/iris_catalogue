@@ -29,7 +29,22 @@
 <header class="iris-header">
   <img src="static/images/extracted/ESP022.jpg" alt="Logo">
   <h1>IRIS <span>Catalog</span></h1>
+  <input type="text" id="searchInput" placeholder="Search by REF/description…">
 </header>
+  <nav class="iris-nav">
+  <div class="container">
+    <ul class="nav-list">
+      <li><a href="#electronics" class="nav-link">Electronics</a></li>
+      <li><a href="#pc-iris" class="nav-link">PC IRIS</a></li>
+      <li><a href="#cables" class="nav-link">Cables</a></li>
+      <li><a href="#optics" class="nav-link">Optics</a></li>
+      <li><a href="#encoder" class="nav-link">Encoder</a></li>
+      <li><a href="#spacer" class="nav-link">Spacers</a></li>
+      <li><a href="#pneumatic" class="nav-link">Pneumatic</a></li>
+      <li><a href="#others" class="nav-link">Others</a></li>
+    </ul>
+  </div>
+</nav>
 
 <main class="container">
   <!-- Electronics -->
@@ -211,6 +226,21 @@
         card.style.display = val === '' || ref.includes(val) || desc.includes(val) ? '' : 'none';
       });
     });
+     /* плавная прокрутка по якорям */
+  document.querySelectorAll('.nav-link').forEach(l => l.addEventListener('click', e => {
+    e.preventDefault();
+    document.querySelector(l.getAttribute('href')).scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }));
+  /* поиск */
+  document.getElementById('searchInput').addEventListener('input', function () {
+    const val = this.value.toLowerCase();
+    document.querySelectorAll('.part-card').forEach(card => {
+      const ref  = card.dataset.ref.toLowerCase();
+      const desc = card.dataset.extra.toLowerCase();
+      card.style.display = val === '' || ref.includes(val) || desc.includes(val) ? '' : 'none';
+    });
+  });
   </script>
 </body>
 </html>
+
