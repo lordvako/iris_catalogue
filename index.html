@@ -6,22 +6,24 @@
   <title>IRIS Catalog – EVOLUTION 12/16</title>
   <style>
     :root{font-size:16px}
-    body{font-family:'Roboto',Arial,sans-serif;margin:0;background:#f8f9fa;color:#333}
+    body{font-family:'Roboto',Arial,sans-serif;margin:0;background:#f8f9fa;color:#333;transition:margin-right .4s ease}
     .iris-header{display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#1a237e 0%,#3949ab 100%);color:#fff;padding:1rem;text-align:center}
     .iris-header img{height:40px;margin-right:1rem;border-radius:4px}
     .container{max-width:1200px;margin:0 auto;padding:1rem}
     .search-container{padding:1rem;background:#fff}
     #searchInput{padding:.5rem 1rem;border:1px solid #ccc;border-radius:20px;width:100%;max-width:300px;font-size:1rem}
-    .nav-list{display:flex;gap:1rem;flex-wrap:wrap;list-style:none;margin:0;padding:1rem 0;background:#fff}
-    .nav-link{color:#1a237e;text-decoration:none;font-weight:500}
+    .nav-list{display:flex;gap:1rem;flex-wrap:wrap;list-style:none;margin:0;padding:1rem 0}
+    .nav-link{color:#3949ab;text-decoration:none;font-weight:600;font-size:1.1rem;padding:.5rem 1rem;border-radius:6px;transition:background .3s,color .3s}
+    .nav-link:hover{background:#3949ab;color:#fff}
     .section{margin:2rem 0}
     .section h2{color:#1a237e;margin-bottom:1rem}
-    .parts-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:1rem}
+    .parts-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax:140px,1fr));gap:1rem;margin-right:0;transition:margin-right .4s ease}
+    .sidebar-open .parts-grid{margin-right:400px}
     .part-card{background:#fff;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.15);cursor:pointer}
     .part-card img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:8px 8px 0 0}
     .part-card h3{margin:.5rem;font-size:.9rem;text-align:center;color:#1a237e}
-    .sidebar{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);width:90%;max-width:400px;max-height:90vh;background:#fff;border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,.3);z-index:1000;display:none;overflow-y:auto;padding:1.5rem}
-    .sidebar.open{display:block}
+    .sidebar{position:fixed;top:0;right:-400px;width:400px;height:100%;background:#fff;box-shadow:-4px 0 12px rgba(0,0,0,.3);z-index:1000;transition:right .4s ease;overflow-y:auto;padding:1.5rem}
+    .sidebar.open{right:0}
     .sidebar-content{position:relative}
     #sidebarClose{position:absolute;top:.5rem;right:.5rem;background:none;border:none;font-size:1.5rem;cursor:pointer;color:#666}
     #sidebarTitle{font-size:1.25rem;font-weight:700;color:#1a237e;margin-bottom:.5rem}
@@ -59,11 +61,11 @@
     <h2>Electronics & Electricity</h2>
     <div class="parts-grid">
       <!-- 15 -->
-      <div class="part-card" data-ref="ED018" data-place="fuse_place.jpg" data-extra="Compact fuse 5×20 mm.">
+      <div class="part-card" data-ref="ED018" data-place="tracking_place.jpg" data-extra="Compact fuse 5×20 mm.">
         <img src="static/images/extracted/ED018.jpg" alt="ED018"><h3>ED018</h3></div>
-      <div class="part-card" data-ref="ED019" data-place="fuse_place.jpg" data-extra="High-current fuse 10 A 250 V.">
+      <div class="part-card" data-ref="ED019" data-place="tracking_place.jpg" data-extra="High-current fuse 10 A 250 V.">
         <img src="static/images/extracted/ED019.jpg" alt="ED019"><h3>ED019</h3></div>
-      <div class="part-card" data-ref="ED020" data-place="fuse_place.jpg" data-extra="Small 1A fuse.">
+      <div class="part-card" data-ref="ED020" data-place="tracking_place.jpg" data-extra="Small 1A fuse.">
         <img src="static/images/extracted/ED020.jpg" alt="ED020"><h3>ED020</h3></div>
       <div class="part-card" data-ref="ED021" data-place="tracking_place.jpg" data-extra="24 V relay.">
         <img src="static/images/extracted/ED021.jpg" alt="ED021"><h3>ED021</h3></div>
@@ -190,7 +192,7 @@
     </div>
   </section>
 
-  <!-- Sidebar -->
+  <!-- Sidebar (drawer) -->
   <aside id="sidebar" class="sidebar">
     <button id="sidebarClose">✕</button>
     <div class="sidebar-content">
@@ -210,7 +212,7 @@
       e.preventDefault();
       document.querySelector(l.getAttribute('href')).scrollIntoView({ behavior: 'smooth', block: 'start' });
     }));
-    /* sidebar */
+    /* sidebar drawer */
     document.querySelectorAll('.part-card').forEach(c => c.addEventListener('click', () => {
       const ref   = c.dataset.ref;
       const desc  = c.dataset.extra;
@@ -221,9 +223,11 @@
       document.getElementById('sidebarDesc').textContent = desc;
       document.getElementById('sidebarPlace').src = 'static/images/extracted/' + place;
       document.getElementById('sidebar').classList.add('open');
+      document.body.classList.add('sidebar-open'); /* чтобы сдвинуть контент */
     }));
     document.getElementById('sidebarClose').addEventListener('click', () => {
       document.getElementById('sidebar').classList.remove('open');
+      document.body.classList.remove('sidebar-open');
     });
     document.getElementById('searchInput').addEventListener('input', function () {
       const val = this.value.toLowerCase();
@@ -236,4 +240,3 @@
   </script>
 </body>
 </html>
-
